@@ -16,14 +16,15 @@ export function useCanvas(canvasWidth: number , canvasHeight: number, draw: (con
       if(refresh) {
         setInterval(() => {
           console.log("marseil")
-           //context.clearRect(0, 0, canvasWidth, canvasHeight);
+           context.clearRect(0, 0, canvasWidth, canvasHeight);
            draw(context);
         }, refresh);
-      } else {
+       } else {
+        console.log("om")
         context.clearRect(0, 0, canvasWidth, canvasHeight);
         draw(context);
       }
-  }, [canvasRef, canvasWidth, canvasHeight, draw]);
+  }, [canvasRef, canvasWidth, canvasHeight, draw, refresh]);
 
   return { canvasRef };
 }
