@@ -1,5 +1,9 @@
 # Orage et parapluie
 
-Sound from https://freesound.org/people/RHumphries/sounds/2523/ named mixkit-thunder-deep-rumble-1296.wav (converted in mp3)
+I tried to both animate and add FX fora drawing made by a friend
 
-https://guillaume-gomez.github.io/move-pixel-randomly/
+[try online](https://guillaume-gomez.github.io/orage-et-parapluie/)
+
+# References
+
+Sound from https://freesound.org/people/RHumphries/sounds/2523/ named mixkit-thunder-deep-rumble-1296.wav (converted in mp3)
