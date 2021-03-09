@@ -61,7 +61,7 @@ button {
 -webkit-animation: flash ease-out 3s infinite;
 -moz-animation: flash ease-out 3s infinite;
 animation: flash ease-out 3s infinite;
-animation-delay: 1s;
+//animation-delay: 1s;
 }
 
 @-webkit-keyframes flash {

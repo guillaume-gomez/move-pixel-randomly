@@ -1,5 +1,5 @@
 import React from 'react';
-import { Howl } from 'howler';
+import { Howl, Howler } from 'howler';
 import CanvasManipulator from "./CanvasManipulator";
 import './App.css';
   const sound = new Howl({
@@ -15,10 +15,11 @@ function App() {
       <div className="bg"></div>
       <div className="lightning flashit"></div>
       <header className="App-header">
+        <h1>Orage</h1>
         <CanvasManipulator />
         <div className="buttons">
           <button onClick={() => sound.play()}>Play</button>
-          <button onClick={() => sound.stop()}>Mute</button>
+          <button onClick={() => sound.stop()}>Stop</button>
         </div>
       </header>
     </div>
