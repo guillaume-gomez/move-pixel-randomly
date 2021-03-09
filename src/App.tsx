@@ -15,7 +15,7 @@ function App() {
       <div className="bg"></div>
       <div className="lightning flashit"></div>
       <header className="App-header">
-        <h1>Orage</h1>
+        <h1>Orage et parapluie</h1>
         <CanvasManipulator />
         <div className="buttons">
           <button onClick={() => sound.play()}>Play</button>
