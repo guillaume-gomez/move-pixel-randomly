@@ -1,6 +1,6 @@
 # Orage et parapluie
 
-I tried to both animate and add FX fora drawing made by a friend
+I tried to both animate and add FX for a drawing made by a friend
 
 [try online](https://guillaume-gomez.github.io/orage-et-parapluie/)
 
