@@ -7,7 +7,7 @@ export function useCanvas(canvasWidth: number , canvasHeight: number, draw: (con
     context.clearRect(0, 0, canvasWidth, canvasHeight);
     draw(context);
     requestAnimationFrame(() => redrawMem(context))
-  }, [draw]);
+  }, [draw, canvasWidth, canvasHeight]);
 
   useEffect(() => {
     const canvasObject = canvasRef.current;

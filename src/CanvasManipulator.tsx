@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useCanvas } from "./useCanvas";
-import artwork from './test.png';
+import artwork from './solene-min.png';
 
 function getRandomInt(min:number, max:number) {
   min = Math.ceil(min);
@@ -11,6 +11,7 @@ function getRandomInt(min:number, max:number) {
 function CanvasManipulator() {
   const [width, setWidth] = useState<number>(600);
   const [height, setHeight] = useState<number>(600);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [image, setImage] = useState<HTMLImageElement|null>(null);
   const { canvasRef } = useCanvas(width, height, draw, true);
 
@@ -19,16 +20,16 @@ function CanvasManipulator() {
      image.onload = () => {
       setWidth(image.width);
       setHeight(image.height);
+      setIsLoaded(true);
      };
      image.src = artwork;
      setImage(image);
   },[setImage]);
 
   function draw(context: CanvasRenderingContext2D) {
-    if(!image) {
+    if(!image || !isLoaded) {
       return;
     }
-
     context.drawImage(image, 0, 0);
   
     const imageData = context.getImageData(0, 0, image.width, image.height);
@@ -56,9 +57,6 @@ function CanvasManipulator() {
   function isNotBackground(red: number, green: number, blue: number) : boolean {
     return red <= 180 || green <= 180 || blue <= 180;
   }
-
-  console.log("rerender")
-
   return (
     <div className="App">
       <canvas ref={canvasRef} width={width} height={height} id="viewport"></canvas>
