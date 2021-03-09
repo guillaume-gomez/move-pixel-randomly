@@ -3,10 +3,10 @@ import { Howl, Howler } from 'howler';
 import CanvasManipulator from "./CanvasManipulator";
 import './App.css';
 // only for deployment
-const image = require('/mixkit-thunder-deep-rumble-1296.mp3');
+const music = require('./mixkit-thunder-deep-rumble-1296.mp3');
 
   const sound = new Howl({
-    src: ['/mixkit-thunder-deep-rumble-1296.mp3'],
+    src: ['./mixkit-thunder-deep-rumble-1296.mp3'],
     loop: true,
     volume: 0.5,
     autoplay: true
